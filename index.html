@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>NeuroRéussit - Inicio</title>
-    <link rel="icon" type="image/png" href="https://objectif-reussite-delf.neuroreussit.com/index.html">
-    <link href="https://objectif-reussite-delf.neuroreussit.com/index.html" rel="stylesheet">
-    <link rel="stylesheet" href="https://objectif-reussite-delf.neuroreussit.com/index.html">
+    <link rel="icon" type="image/png" href="https://neuroreussit.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { 
             --oxford: #002147; 
             --gold: #C5A059; 
             --white: #ffffff; 
-            --dark-bg: #f5f6fa; /* Fondo gris claro principal */
-            --card-bg: #ffffff;  /* Tarjetas en color blanco para contraste */
-            --text-dark: #2f3542; /* Texto principal oscuro */
+            --dark-bg: #f5f6fa;
+            --card-bg: #ffffff; 
+            --text-dark: #2f3542; 
         }
         
         html {
@@ -30,7 +29,6 @@
             min-height: 100vh;
         }
 
-        /* BARRA DE NAVEGACIÓN COMPACTA TRILINGÜE */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -86,17 +84,15 @@
             color: var(--gold);
         }
         
-        /* SECCIÓN HERO */
         .hero {
             text-align: center; 
             padding: 80px 20px 90px 20px;
             background: radial-gradient(circle at center, #ffffff 0%, var(--dark-bg) 70%);
         }
 
-        /* CONTENEDOR OPTIMIZADO PARA VIDEO GRANDE (SIN CÍRCULO NI BORDES) */
         .video-hero-container {
             width: 100%;
-            max-width: 500px; /* Tamaño del video expandido */
+            max-width: 500px;
             margin: 0 auto 35px auto;
             display: flex;
             align-items: center;
@@ -106,8 +102,8 @@
         .video-hero-container video {
             width: 100%;
             height: auto;
-            border-radius: 12px; /* Un ligero toque curvo en las esquinas del video para que luzca limpio */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sutil sombra de profundidad */
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
         .hero h1 { 
@@ -155,7 +151,6 @@
             border-color: var(--gold);
         }
         
-        /* SECCIÓN GLOBAL DE CONTENIDO */
         .section-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -182,7 +177,6 @@
             margin: 15px auto 0 auto;
         }
 
-        /* SECCIÓN DE NUESTRA VISIÓN */
         .vision-text {
             line-height: 1.8;
             font-size: 1.05rem;
@@ -197,7 +191,6 @@
             margin: 0 auto;
         }
 
-        /* BLOQUES DE PROYECTOS (ACCESO) */
         .proyectos-wrapper { 
             display: flex; 
             gap: 40px; 
@@ -271,7 +264,6 @@
             cursor: pointer;
         }
 
-        /* SECCIÓN POR QUÉ NEUROREUSSIT */
         .aliados-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -301,7 +293,6 @@
             text-align: justify;
         }
 
-        /* SECCIÓN CONTACTO */
         .contacto-wrapper {
             background: var(--card-bg);
             border-radius: 15px;
@@ -320,20 +311,7 @@
             line-height: 1.5;
             padding: 0 20px;
         }
-        
-        /* BOTÓN DE ACCESO INVISIBLE PARA ADMINISTRADOR */
-        .admin-secret-link { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 60px; 
-            height: 60px; 
-            background: transparent; 
-            cursor: pointer; 
-            z-index: 99999; 
-        }
 
-        /* FOOTER */
         .footer {
             text-align: center;
             padding: 30px 20px;
@@ -347,16 +325,53 @@
 </head>
 <body>
 
-    <div class="admin-secret-link" onclick="window.location.href='https://objectif-reussite-delf.neuroreussit.com'" title="Connexion"></div>
-
     <nav class="navbar">
         <div class="brand-wrapper">
             <div class="brand">Neuro<span>Réussit</span></div>
             <div class="trilingual-tagline">Accessibilité • Accessibility • Accesibilidad</div>
         </div>
         <div class="nav-links">
-            <a href="https://objectif-reussite-delf.neuroreussit.com/index.html">Vision</a>
-            <a href=<a href="https://neuroclarity.neuroreussit.com/" class="puerta-proyecto">
+            <a href="#vision">Vision</a>
+            <a href="#pilares">Piliers</a>
+            <a href="#aliado">Alliance</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="video-hero-container">
+            <video autoplay loop muted playsinline>
+                <source src="https://firebasestorage.googleapis.com/v0/b/objectif-reussite-delf.firebasestorage.app/o/Logovideo.mp4?alt=media&token=adbc6f17-d457-4f53-b7ab-a2f23a3a4cdd" type="video/mp4">
+                Votre navigateur ne prend pas en charge les vidéos HTML5.
+            </video>
+        </div>
+        <p class="sub-tagline">La ingeniería pedagógica al servicio de la diversidad cognitiva.</p>
+        <button class="btn-scroll-down" onclick="window.location.href='#vision'">
+            En savoir plus
+        </button>
+    </header>
+
+    <section class="section-container" id="vision">
+        <h2 class="section-title">Nuestra Visión</h2>
+        <div class="vision-text">
+            En NeuroRéussit, eliminamos las barreras que separan el esfuerzo del éxito académico. Utilizamos tecnología educativa diseñada específicamente para mentes diversas, con el objetivo de cerrar la brecha educativa y democratizar el acceso al aprendizaje de alto nivel.
+        </div>
+    </section>
+
+    <section class="section-container" id="pilares">
+        <h2 class="section-title">Nuestros Pilares</h2>
+        <div class="proyectos-wrapper">
+            
+            <a href="https://objectif-reussite-delf.neuroreussit.com/index.html" class="puerta-proyecto">
+                <img src="./assets/Logo.png" alt="Logo Réussite DELF" class="logo-grande">
+                <div class="pilar-title">Objectif Réussite DELF: La Certificación al Alcance de Todos</div>
+                <div class="pilar-description">
+                    No es solo un programa de francés; es un sistema de entrenamiento de alto rendimiento que conecta la intención de aprender con el éxito en la certificación oficial. Como examinadora y correctora certificada, he integrado en esta plataforma las rúbricas y criterios oficiales, convirtiendo el examen en un proceso transparente y superable.
+                </div>
+                <button class="btn-entrar" style="background: var(--oxford);">Entrar</button>
+            </a>
+
+            <a href="https://neuroclarity.neuroreussit.com/" class="puerta-proyecto">
                 <img src="./assets/NeuroClarity.png" alt="Logo NeuroClarity" class="logo-grande">
                 <div class="pilar-title">NeuroClarity: Metodología para Mentes Diversas</div>
                 <div class="pilar-description">
@@ -365,3 +380,36 @@
                 <button class="btn-entrar" style="background: #B099CE;">Entrar</button>
             </a>
             
+        </div>
+    </section>
+
+    <section class="section-container" id="aliado">
+        <h2 class="section-title">Por qué NeuroRéussit es tu mejor aliado</h2>
+        <div class="aliados-grid">
+            <div class="aliado-card">
+                <h3>Innovación EdTech</h3>
+                <p>Al alojar nuestras soluciones en infraestructuras técnicas de vanguardia, garantizamos estabilidad, rapidez y una experiencia de usuario impecable.</p>
+            </div>
+            <div class="aliado-card">
+                <h3>Autoridad Técnico</h3>
+                <p>Fusionamos la experiencia de una examinadora certificada por France Éducation international con herramientas digitales diseñadas para el siglo XXI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container" id="contact">
+        <h2 class="section-title">Contact & Inscription</h2>
+        <div class="contacto-wrapper">
+            <p class="contacto-instruction">
+                Inscríbase para recibir les últimas actualizaciones, informaciones sobre nuestros programas o abrir tu acceso de estudiante.
+            </p>
+            <iframe width="540" height="305" src="https://201ee2fd.sibforms.com/v2/serve/MUIFADHSCjB0UNge7clblPZRNoebgcDGjGaQVPo0DORZtXNRmCJ9Ol2PmruDajE7wGhxSSiSGJzpx9JFAW4boeMmQdRtGIiNi451_Q6KZFkJAYFenBzkbtoXzSfcN5Xgn2jxKqwWgwZvI4Q1wfAlu0VaAVLLOTDLIzVwRmQCzv0zvW5lLxOXiMiqDN2UEAOd6U8UQdDMj1T5f-SzZw==" frameborder="0" scrolling="auto" allowfullscreen style="display: block; margin: 0 auto; max-width: 100%; border-radius: 8px;"></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        &copy; 2026 NeuroRéussit. Todos los derechos reservados. | Accessibilité Éducative.
+    </footer>
+
+</body>
+</html>
