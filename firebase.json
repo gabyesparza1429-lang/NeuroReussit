@@ -9,3 +9,4 @@ cat << 'EOF' > firebase.json
     ]
   }
 }
+EOF
